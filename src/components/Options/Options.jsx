@@ -1,14 +1,12 @@
-import css from './Options.module.css'
+import css from './Options.module.css';
 
-const Options = () => {
+export default function Options({ handleClicks, totalFeedback, resetButton }) {
     return (
         <div>
-         <button>Good</button>
-         <button>Neutral</button>
-         <button>Bad</button>
-         <button>Reset</button>
+            <button onClick={() => handleClicks('good')}>Good: </button>
+            <button onClick={() => handleClicks('neutral')}>Neutral</button>
+            <button onClick={() => handleClicks('bad')}>Bad</button>
+            {totalFeedback !== 0 && <button onClick={() => resetButton()}>Reset</button>}
         </div>
-    )
-
-};
-export default Options
+    );
+}
