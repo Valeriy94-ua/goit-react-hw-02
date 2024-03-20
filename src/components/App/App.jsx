@@ -25,6 +25,9 @@ export default function App() {
 
     const totalFeedback = feedback.good + feedback.neutral + feedback.bad;
 
+    const positiveFeedback =  Math.round((feedback.good / totalFeedback) * 100);
+
+
     const resetButton = () => {
         setFeedback({ good: 0, neutral: 0, bad: 0 });
     }
@@ -33,7 +36,7 @@ export default function App() {
         <>
             <Description/>
             <Options handleClicks={handleClicks} resetButton={resetButton}/>
-            <Feedback feedback={feedback} totalFeedback={totalFeedback} />
+            <Feedback feedback={feedback} totalFeedback={totalFeedback} positiveFeedback={positiveFeedback} />
         </>
     )
 }
