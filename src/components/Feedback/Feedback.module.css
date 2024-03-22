@@ -1,0 +1,12 @@
+.good_option {
+    color: green;
+}
+.neutral_option {
+    color: orange;
+}
+.bad_option {
+    color: red;
+}
+.total {
+    color: brown;
+}

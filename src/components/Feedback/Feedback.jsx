@@ -1,22 +1,14 @@
 import css from './Feedback.module.css';
 
 export default function Feedback({ feedback, totalFeedback, positiveFeedback }) {
-    if (totalFeedback === 0|| !feedback) {
-        return (
-            <div>
-                <p>
-                    No Feedback yet!
-                </p>
-            </div>
-        );
-    }
+
     return (
         <div>
-            <p>Good: {feedback.good} </p>
-            <p>Neutral: {feedback.neutral}</p>
-            <p>Bad: {feedback.bad}</p>
-            <p>Total: {totalFeedback}</p>
-            <p>Positive: {positiveFeedback}%</p>
+            <p className={css.good_option}>Good: {feedback.good} </p>
+            <p className={css.neutral_option}>Neutral: {feedback.neutral}</p>
+            <p className={css.bad_option}>Bad: {feedback.bad}</p>
+            <p className={css.total}>Total: {totalFeedback}</p>
+            <p className={css.good_option}>Positive: {positiveFeedback}%</p>
         </div>
     );
 }

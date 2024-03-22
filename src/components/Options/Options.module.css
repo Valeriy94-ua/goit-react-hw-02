@@ -1,0 +1,18 @@
+.good_option {
+    background-color: green;
+    color: white;
+    margin-right: 5px;
+}
+.neutral_option {
+    background-color: orange;
+    color: white;
+    margin-right: 5px;
+}
+.bad_option {
+    background-color: red;
+    color: white;
+    margin-right: 5px;
+}
+.reset_option {
+    background-color: gray;
+}
